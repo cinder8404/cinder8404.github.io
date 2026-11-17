@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>艾彩原创视频观看-原创短片与幕后时间线</title>
+<meta name="description" content="艾彩原创视频观看导航：梳理原创短片、系列剧集、幕后花絮与创作者访谈，按类型与更新日期整理可核对的片单、制作规格和观看入口说明。">
+<meta name="keywords" content="艾彩原创视频观看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312382f'/%3E%3Cpath d='M18 42V22l14 8 14-8v20l-14-8z' fill='%23f2c14e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2320;
+  --ink-soft:#42504a;
+  --muted:#6b7a73;
+  --bg:#f7f5ef;
+  --surface:#ffffff;
+  --surface-2:#eef1e8;
+  --line:#d9ddd2;
+  --brand:#12382f;
+  --brand-2:#1f5a48;
+  --accent:#c9772b;
+  --accent-soft:#f7e6cf;
+  --gold:#f2c14e;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(18,56,47,.06),0 8px 24px rgba(18,56,47,.06);
+  --shadow-sm:0 1px 2px rgba(18,56,47,.08);
+  --space-1:6px;--space-2:12px;--space-3:18px;--space-4:28px;--space-5:44px;--space-6:64px;
+  --font:"Noto Serif SC","Source Han Serif SC","Songti SC",Georgia,serif;
+  --font-ui:-apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  --ann-h:44px;
+  --head-h:64px;
+  --stick:calc(var(--ann-h) + var(--head-h));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-ui);font-size:16px;line-height:1.75;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--font);color:var(--brand);line-height:1.32;margin:0}
+p{margin:0 0 .9em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+[id]{scroll-margin-top:calc(var(--stick) + 14px)}
+
+/* ---------- 吸顶公告 + 页头 ---------- */
+.sticky-top{position:sticky;top:0;z-index:60}
+.announce{
+  height:var(--ann-h);display:flex;align-items:center;gap:10px;
+  background:var(--brand);color:#e9efe9;font-size:13.5px;padding:0 16px;
+  overflow:hidden;white-space:nowrap;
+}
+.announce strong{color:var(--gold);font-weight:600;letter-spacing:.02em}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+.announce .txt{overflow:hidden;text-overflow:ellipsis}
+.announce time{color:#b9c9c0;font-variant-numeric:tabular-nums}
+.site-head{
+  height:var(--head-h);background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;
+  gap:16px;padding:0 16px;box-shadow:var(--shadow-sm);
+}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font);font-weight:700;color:var(--brand);font-size:18px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand:hover{text-decoration:none}
+.head-nav{display:flex;gap:2px;margin-left:8px;flex-wrap:wrap}
+.head-nav a{padding:6px 10px;border-radius:999px;font-size:14.5px;color:var(--ink-soft)}
+.head-nav a:hover{background:var(--surface-2);color:var(--brand);text-decoration:none}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:8px}
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-wrap input{
+  width:190px;padding:8px 34px 8px 12px;border:1px solid var(--line);border-radius:999px;
+  font-family:var(--font-ui);font-size:14px;background:var(--surface);color:var(--ink);
+}
+.search-wrap input:focus{outline:2px solid var(--brand-2);outline-offset:1px}
+.search-wrap svg{position:absolute;right:10px;width:16px;height:16px;color:var(--muted);pointer-events:none}
+.search-result{
+  position:absolute;top:calc(100% + 8px);right:0;width:300px;max-height:320px;overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+  box-shadow:var(--shadow);padding:6px;display:none;z-index:70;
+}
+.search-result.open{display:block}
+.search-result a{display:block;padding:8px 10px;border-radius:6px;font-size:14px;color:var(--ink)}
+.search-result a:hover{background:var(--surface-2);text-decoration:none}
+.search-result .empty{padding:12px 10px;font-size:13.5px;color:var(--muted)}
+.btn-menu{display:none;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;color:var(--brand);cursor:pointer;min-height:38px}
+.btn-menu:hover{background:var(--surface-2)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;background:
+    radial-gradient(900px 420px at 12% -10%, #e3ecdf 0%, transparent 62%),
+    radial-gradient(700px 380px at 96% 8%, #f8ecd8 0%, transparent 60%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1160px;margin:0 auto;padding:var(--space-5) 20px var(--space-5);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-4);align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.06em;
+  color:var(--brand-2);background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;margin-bottom:16px;
+}
+.hero h1{font-size:clamp(30px,4.4vw,50px);letter-spacing:.01em;margin-bottom:14px}
+.hero h1 .mark{background:linear-gradient(transparent 66%, var(--accent-soft) 66%);padding:0 2px}
+.hero-lead{font-size:16.5px;color:var(--ink-soft);max-width:36em;margin-bottom:20px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;
+  font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease,background .18s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-2)}
+.btn-ghost{background:var(--surface);color:var(--brand);border-color:var(--line)}
+.btn-ghost:hover{background:var(--surface-2)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:22px;border-top:1px solid var(--line);padding-top:16px}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats b{display:block;font-family:var(--font);font-size:23px;color:var(--brand);font-variant-numeric:tabular-nums;line-height:1.25}
+.hero-art{position:relative;min-height:320px}
+.hero-art svg{width:100%;height:auto}
+.float-card{
+  position:absolute;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:var(--shadow);padding:10px 14px;font-size:13px;color:var(--ink-soft);
+}
+.float-card b{display:block;font-family:var(--font);color:var(--brand);font-size:15px}
+.fc-1{top:4%;left:-4%}
+.fc-2{bottom:8%;right:-2%}
+.fc-3{bottom:34%;left:6%;font-size:12.5px}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:var(--space-4);padding:var(--space-5) 0}
+.main-col{display:flex;flex-direction:column;gap:var(--space-4);min-width:0}
+.side-col{display:flex;flex-direction:column;gap:var(--space-3);min-width:0}
+
+/* ---------- 板块通用 ---------- */
+.section{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-4);box-shadow:var(--shadow-sm)}
+.section.plain{background:transparent;border:none;box-shadow:none;padding:0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.sec-head h2{font-size:23px}
+.sec-head .sub{font-size:13.5px;color:var(--muted);max-width:44em}
+.sec-kicker{font-size:12px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  display:inline-block;font-size:13px;padding:5px 11px;border-radius:999px;
+  background:var(--surface-2);color:var(--brand-2);border:1px solid transparent;
+}
+.chip:hover{background:var(--accent-soft);text-decoration:none}
+.meta{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.meta .sep{margin:0 6px;color:var(--line)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 16px;transition:transform .18s ease,border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:var(--brand-2)}
+.card h3{font-size:16.5px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink-soft);margin:0 0 8px}
+.card .meta{display:block;margin-top:6px}
+.thumb{border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--line);margin-bottom:10px;background:var(--surface-2)}
+.thumb img{width:100%;height:150px;object-fit:cover}
+
+/* 榜单 */
+.rank-list{list-style:none;margin:0;padding:0;counter-reset:rk}
+.rank-list li{
+  display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:baseline;
+  padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.rank-list li:last-child{border-bottom:none}
+.rank-list li::before{
+  counter-increment:rk;content:counter(rk);
+  font-family:var(--font);font-size:18px;color:var(--accent);font-weight:700;
+  font-variant-numeric:tabular-nums;
+}
+.rank-list .t{font-size:15px;color:var(--ink)}
+.rank-list .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* 紧凑列表 */
+.mini-list{list-style:none;margin:0;padding:0}
+.mini-list li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}
+.mini-list li:last-child{border-bottom:none}
+.mini-list .d{font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums;flex:none;min-width:56px}
+.mini-list .c{font-size:14.5px;color:var(--ink-soft)}
+.mini-list .c b{color:var(--brand);font-weight:600}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.compare > div{padding:16px}
+.compare > div:first-child{background:var(--surface-2);border-right:1px solid var(--line)}
+.compare h3{font-size:15.5px;margin-bottom:8px}
+.compare ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-soft)}
+.compare li{margin-bottom:6px}
+
+/* 步骤 */
+.steps{list-style:none;counter-reset:st;margin:0;padding:0;display:grid;gap:12px}
+.steps li{position:relative;padding-left:44px;counter-increment:st;font-size:14.5px;color:var(--ink-soft)}
+.steps li::before{
+  content:counter(st,decimal-leading-zero);position:absolute;left:0;top:0;
+  width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;
+  font-family:var(--font);font-size:13px;display:flex;align-items:center;justify-content:center;
+}
+.steps li b{color:var(--brand);display:block;margin-bottom:2px;font-size:15px}
+
+/* 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:8px}
+.tag-index a{
+  font-size:13.5px;padding:6px 12px;border-radius:var(--radius-sm);
+  background:var(--surface);border:1px solid var(--line);color:var(--ink-soft);
+}
+.tag-index a:hover{background:var(--brand);color:#fff;border-color:var(--brand);text-decoration:none}
+
+/* 时间线 */
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 18px 18px}
+.timeline li::before{content:"";position:absolute;left:-9px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--brand)}
+.timeline time{font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums}
+.timeline b{display:block;font-size:15px;color:var(--brand);margin:2px 0 3px}
+.timeline p{font-size:14px;color:var(--ink-soft);margin:0}
+
+/* 深度解析 */
+.deep{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-4);box-shadow:var(--shadow-sm)}
+.deep h2{font-size:24px;margin-bottom:6px}
+.deep .standfirst{font-size:15px;color:var(--ink-soft);border-left:3px solid var(--gold);padding-left:14px;margin:14px 0 22px}
+.deep h3{font-size:18px;margin:26px 0 10px;padding-top:16px;border-top:1px solid var(--line)}
+.deep h3:first-of-type{border-top:none;padding-top:0;margin-top:8px}
+.deep p{font-size:15.5px;color:var(--ink-soft);line-height:1.85}
+.deep strong{color:var(--brand);font-weight:600}
+.callout{
+  background:var(--surface-2);border:1px solid var(--line);border-left:4px solid var(--brand-2);
+  border-radius:var(--radius-sm);padding:14px 16px;margin:16px 0;font-size:14.5px;color:var(--ink-soft);
+}
+.callout b{color:var(--brand)}
+.verify{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.verify caption{caption-side:top;text-align:left;font-size:13px;color:var(--muted);padding-bottom:8px}
+.verify th,.verify td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.verify th{background:var(--surface-2);color:var(--brand);font-weight:600;white-space:nowrap}
+.verify tr:last-child td{border-bottom:none}
+.verify td{color:var(--ink-soft)}
+blockquote{
+  margin:16px 0;padding:16px 18px;background:var(--brand);color:#e6efe7;
+  border-radius:var(--radius-sm);font-family:var(--font);font-size:16px;line-height:1.7;
+}
+blockquote cite{display:block;margin-top:8px;font-size:12.5px;color:var(--gold);font-style:normal;font-family:var(--font-ui)}
+
+/* FAQ */
+.faq details{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);
+  margin-bottom:10px;padding:0 14px;
+}
+.faq details[open]{background:#fbfaf6;border-color:var(--brand-2)}
+.faq summary{
+  cursor:pointer;font-size:15px;font-weight:600;color:var(--brand);padding:13px 0;
+  list-style:none;display:flex;align-items:center;gap:10px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"＋";color:var(--accent);font-weight:700;flex:none}
+.faq details[open] summary::before{content:"－"}
+.faq .ans{padding:0 0 14px 24px;font-size:14.5px;color:var(--ink-soft);line-height:1.8}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.comment{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:13px 15px;display:grid;grid-template-columns:38px 1fr;gap:12px;
+}
+.avatar{
+  width:38px;height:38px;border-radius:50%;background:var(--surface-2);color:var(--brand);
+  display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:16px;font-weight:700;
+}
+.comment .who{font-size:13.5px;color:var(--brand);font-weight:600}
+.comment .who span{font-weight:400;color:var(--muted);margin-left:8px;font-size:12px}
+.comment p{font-size:14.5px;color:var(--ink-soft);margin:4px 0 0}
+
+/* 侧栏 */
+.side-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow-sm)}
+.side-box h2{font-size:16px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;margin:0;padding:0;position:relative}
+.side-nav a{
+  display:block;font-size:14px;padding:7px 10px;border-radius:6px;color:var(--ink-soft);
+  border-left:2px solid transparent;
+}
+.side-nav a:hover{background:var(--surface-2);text-decoration:none}
+.side-nav a.active{background:var(--surface-2);color:var(--brand);border-left-color:var(--accent);font-weight:600}
+.side-note{font-size:13px;color:var(--muted);margin-top:12px}
+.side-links{list-style:none;margin:0;padding:0}
+.side-links li{margin-bottom:9px;font-size:14px;line-height:1.55}
+.side-links .meta{display:block;margin-top:1px}
+.creator-quote{font-family:var(--font);font-size:15px;color:var(--brand);line-height:1.7}
+.creator-quote cite{display:block;margin-top:10px;font-family:var(--font-ui);font-size:12.5px;color:var(--muted);font-style:normal}
+
+/* 相关推荐 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{
+  font-size:14px;padding:7px 13px;border-radius:999px;background:var(--surface);
+  border:1px solid var(--line);color:var(--brand-2);
+}
+.reco a:hover{background:var(--accent-soft);border-color:var(--accent-soft);text-decoration:none;color:var(--brand)}
+
+/* 页脚 */
+.site-foot{background:var(--brand);color:#c8d6cd;padding:var(--space-5) 0 calc(var(--space-5) + 6px);margin-top:var(--space-5)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--space-4);max-width:1160px;margin:0 auto;padding:0 20px}
+.site-foot h3{color:#fff;font-size:15px;margin-bottom:12px;font-family:var(--font-ui);letter-spacing:.04em}
+.site-foot a{color:#c8d6cd;font-size:14px}
+.site-foot a:hover{color:var(--gold)}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:var(--font);color:#fff;font-size:19px;font-weight:700;margin-bottom:12px}
+.foot-brand svg{width:32px;height:32px}
+.foot-desc{font-size:14px;line-height:1.8;color:#a9bdb1;max-width:26em}
+.foot-list{list-style:none;margin:0;padding:0}
+.foot-list li{margin-bottom:8px}
+.foot-bottom{max-width:1160px;margin:var(--space-4) auto 0;padding:18px 20px 0;border-top:1px solid rgba(255,255,255,.14);font-size:12.5px;color:#93a89c;display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;
+  background:var(--brand);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:80;
+}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--brand-2)}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1000px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .side-col{order:2}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-art{min-height:0;max-width:520px;margin-top:8px}
+  .float-card{position:static;display:inline-block;margin:6px 6px 0 0}
+}
+@media (max-width:760px){
+  :root{--ann-h:52px}
+  .announce{white-space:normal;padding:6px 14px;font-size:12.5px;align-items:flex-start}
+  .announce .txt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal}
+  .head-nav{
+    display:none;position:absolute;top:var(--head-h);left:0;right:0;
+    background:var(--surface);border-bottom:1px solid var(--line);padding:10px 14px;
+    box-shadow:var(--shadow);flex-direction:column;gap:2px;
+  }
+  .head-nav.open{display:flex}
+  .head-nav a{padding:10px 8px;border-radius:8px}
+  .btn-menu{display:inline-flex;align-items:center}
+  .search-wrap input{width:120px}
+  .search-result{width:min(300px,calc(100vw - 32px))}
+  .g2,.g3{grid-template-columns:minmax(0,1fr)}
+  .compare{grid-template-columns:minmax(0,1fr)}
+  .compare > div:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  .section,.deep{padding:18px 16px}
+  .hero-inner{padding:28px 16px}
+  .wrap{padding:0 16px}
+  .foot-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+  .rank-list li{grid-template-columns:28px 1fr;gap:8px}
+  .rank-list .n{grid-column:2}
+  .to-top{right:12px;bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .btn:hover,.card:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"艾彩原创视频观看","url":"https://example.com/","inLanguage":"zh-CN","description":"原创短片、系列剧集与幕后花絮的观看导航与片单整理。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"原创短片和系列剧集在观看顺序上有区别吗？","acceptedAnswer":{"@type":"Answer","text":"单集短片可以任意顺序看，系列剧集按第01集到第08集的编号顺序看，人物关系和伏笔才连得起来。"}},
+{"@type":"Question","name":"幕后花絮适合先看还是后看？","acceptedAnswer":{"@type":"Answer","text":"花絮通常包含结局场景的布景和台词，正片没看完之前先看容易被剧透；如果只想了解制作流程，可以先看拍摄日志第3期。"}},
+{"@type":"Question","name":"不同清晰度的版本画幅会变化吗？","acceptedAnswer":{"@type":"Answer","text":"画幅不变。1080P与4K是同一版母版转码，裁切一致；差别在暗部细节和字幕描边锐度。"}},
+{"@type":"Question","name":"创作者访谈里的说法能当作制作事实吗？","acceptedAnswer":{"@type":"Answer","text":"访谈属于转述，涉及成本、拍摄天数的数字要与片尾制作名单、拍摄日志交叉核对，单一口述不作为唯一依据。"}},
+{"@type":"Question","name":"观看入口标注的更新时间指什么？","acceptedAnswer":{"@type":"Answer","text":"指该条目的片源或字幕文件最后一次替换时间，不是作品首播时间，两者在片单里分开标注。"}}
+]}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="announce" role="region" aria-label="更新公告">
+    <span class="dot" aria-hidden="true"></span>
+    <strong>艾彩原创视频观看</strong>
+    <span class="txt">11月6日更新：《雾港来信》第07集正片与导演解说音轨上线，字幕修订版 v2.1 同步替换；本期新增拍摄日志第3期。</span>
+    <time datetime="2026-11-08">2026-11-08</time>
+  </div>
+
+  <header class="site-head">
+    <a class="brand" href="/#top" aria-label="返回首页">
+      <svg viewBox="0 0 64 64" role="img" aria-label="艾彩图形标志">
+        <rect width="64" height="64" rx="14" fill="#12382f"/>
+        <path d="M16 44V20l16 9 16-9v24l-16-9z" fill="#f2c14e"/>
+        <circle cx="32" cy="14" r="3.4" fill="#c9772b"/>
+      </svg>
+      <span>艾彩原创视频观看</span>
+    </a>
+    <nav class="head-nav" id="headNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选片单</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search-wrap">
+        <label for="q" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">站内搜索</label>
+        <input id="q" type="search" placeholder="搜片名 / 主创" autocomplete="off" aria-describedby="searchHint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <div class="search-result" id="searchResult" role="listbox" aria-live="polite"></div>
+        <span id="searchHint" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">输入片名或主创姓名进行本地查找</span>
+      </div>
+      <button class="btn-menu" id="menuBtn" aria-expanded="false" aria-controls="headNav">菜单</button>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag">原创短片 · 系列剧集 · 幕后档案</span>
+        <h1 id="heroTitle"><span class="mark">艾彩原创视频观看</span></h1>
+        <p class="hero-lead">按类型与日期整理的原创影像目录：长片剧场、竖屏短剧、纪实短片与拍摄日志各自成列。每条记录标出母版规格、字幕版本和片尾制作名单，方便对照着看，也方便核。更新到 11 月 6 日的第 07 集。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#featured">看本期精选片单</a>
+          <a class="btn btn-ghost" href="/#deep">读深度解析</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>126</b>条目已归档</div>
+          <div><b>4</b>片源规格口径</div>
+          <div><b>11-06</b>字幕最近修订</div>
+          <div><b>8</b>集主线连载</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="false">
+        <svg viewBox="0 0 460 340" role="img" aria-label="胶片帧与时间线的原创构图">
+          <defs>
+            <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1f5a48"/><stop offset="1" stop-color="#12382f"/>
+            </linearGradient>
+            <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f2c14e"/><stop offset="1" stop-color="#c9772b"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="26" width="424" height="288" rx="20" fill="#ffffff" stroke="#d9ddd2"/>
+          <rect x="42" y="52" width="260" height="160" rx="12" fill="url(#gA)"/>
+          <path d="M132 96v72l62-36z" fill="url(#gB)"/>
+          <rect x="42" y="222" width="260" height="8" rx="4" fill="#eef1e8"/>
+          <rect x="42" y="222" width="172" height="8" rx="4" fill="#c9772b"/>
+          <circle cx="214" cy="226" r="8" fill="#12382f" stroke="#ffffff" stroke-width="3"/>
+          <g stroke="#d9ddd2" stroke-width="2">
+            <line x1="42" y1="252" x2="302" y2="252"/><line x1="42" y1="268" x2="302" y2="268"/>
+          </g>
+          <g fill="#eef1e8">
+            <rect x="318" y="52" width="102" height="46" rx="8"/>
+            <rect x="318" y="108" width="102" height="46" rx="8"/>
+            <rect x="318" y="164" width="102" height="46" rx="8"/>
+          </g>
+          <g fill="#12382f" font-family="serif" font-size="13">
+            <text x="331" y="80">04K 母版</text>
+            <text x="331" y="136">字幕 v2.1</text>
+            <text x="331" y="192">第07集</text>
+          </g>
+          <g fill="#c9d3cb">
+            <circle cx="334" cy="232" r="5"/><circle cx="352" cy="232" r="5"/><circle cx="370" cy="232" r="5"/>
+            <circle cx="388" cy="232" r="5"/><circle cx="406" cy="232" r="5"/>
+          </g>
+        </svg>
+        <div class="float-card fc-1"><b>第07集</b>主线连载 · 26 分钟</div>
+        <div class="float-card fc-2"><b>导演解说</b>音轨已同步</div>
+        <div class="float-card fc-3">片尾名单 3 段 · 可核对</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- 主内容 -->
+      <div class="main-col">
+
+        <!-- 1 领域概览 -->
+        <section class="section" id="overview" aria-labelledby="h-overview">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Overview</div>
+              <h2 id="h-overview">原创影像目录的内容边界</h2>
+            </div>
+            <p class="sub">四类内容各自解决不同观看需求，混着看容易把花絮当正片、把预告当结局。</p>
+          </div>
+          <div class="grid g2">
+            <div class="card">
+              <h3>长片剧场</h3>
+              <p>单集 22 至 38 分钟，有完整三幕结构。适合按剧集编号追，平均每周五更新一集。</p>
+              <span class="meta">现有 5 部 · 最长一部 8 集</span>
+            </div>
+            <div class="card">
+              <h3>竖屏短剧</h3>
+              <p>单集 90 秒到 3 分钟，横屏母版二次裁切为 9:16。适合通勤间隙看，字幕字号单独调过。</p>
+              <span class="meta">现有 42 条 · 全部有横竖两版</span>
+            </div>
+            <div class="card">
+              <h3>纪实短片</h3>
+              <p>非虚构，采访加现场同期声。片长 12 到 20 分钟，每部片尾列受访者与拍摄地点。</p>
+              <span class="meta">现有 17 部 · 覆盖 9 个拍摄地</span>
+            </div>
+            <div class="card">
+              <h3>幕后与拍摄日志</h3>
+              <p>分镜手稿、灯光布置、场记单扫描件。属于制作档案，不是正片，剧透风险较高。</p>
+              <span class="meta">日志 3 期 · 场记单 46 页</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2 精选内容推荐 -->
+        <section class="section" id="featured" aria-labelledby="h-featured">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Featured</div>
+              <h2 id="h-featured">本期精选原创短片</h2>
+            </div>
+            <p class="sub">挑片标准只有两条：片尾制作名单完整、母版与字幕版本对得上。</p>
+          </div>
+          <div class="grid g3">
+            <article class="card">
+              <div class="thumb">
+                <img src="https://picsum.photos/seed/aicai-wugang/480/300" width="480" height="300" loading="lazy" alt="《雾港来信》雨夜码头场景，灯塔与货轮灯光交错">
+              </div>
+              <h3>雾港来信 第07集</h3>
+              <p>雨夜码头、旧信件与错位的时间线。26 分钟，母版 4K，字幕 v2.1 修订了 9 处地名。</p>
+              <span class="meta">11-06 更新<span class="sep">·</span>主线连载</span>
+            </article>
+            <article class="card">
+              <div class="thumb">
+                <img src="https://picsum.photos/seed/aicai-denglu/480/300" width="480" height="300" loading="lazy" alt="竖屏短剧《等路灯的人》画面，街口橙色路灯与雨伞">
+              </div>
+              <h3>等路灯的人（竖屏版）</h3>
+              <p>3 分钟一镜到底，横屏裁成 9:16 后保留了招牌上的手写字。适合先看竖版再看横版对照。</p>
+              <span class="meta">10-29 上线<span class="sep">·</span>竖屏短剧</span>
+            </article>
+            <article class="card">
+              <div class="thumb">
+                <img src="https://picsum.photos/seed/aicai-shouyi/480/300" width="480" height="300" loading="lazy" alt="纪实短片《守夜人》中旧仓库内的排班表与保温杯">
+              </div>
+              <h3>守夜人 · 仓库十四小时</h3>
+              <p>跟拍夜班管理员一整晚，同期声为主，无解说。18 分钟，片尾列出 6 位受访者与拍摄日期。</p>
+              <span class="meta">10-22 上线<span class="sep">·</span>纪实短片</span>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3 最新更新 -->
+        <section class="section" id="latest" aria-labelledby="h-latest">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Latest</div>
+              <h2 id="h-latest">最近七天的片源与字幕变动</h2>
+            </div>
+            <p class="sub">更新指片源或字幕文件被替换，不等于作品首播。首播日期在片单里单列。</p>
+          </div>
+          <ul class="mini-list">
+            <li><span class="d">11-06</span><span class="c"><b>雾港来信 第07集</b> 正片与导演解说音轨上线，字幕 v2.1 修订地名 9 处</span></li>
+            <li><span class="d">11-05</span><span class="c"><b>拍摄日志第3期</b> 发布，含分镜手稿 12 页、灯光布置示意 4 张</span></li>
+            <li><span class="d">11-03</span><span class="c"><b>等路灯的人</b> 补发横屏母版，竖屏版字幕字号下调 1 级</span></li>
+            <li><span class="d">10-31</span><span class="c"><b>旧城三公里</b> 第02集片尾名单更正：美术助理署名由两人改为三人</span></li>
+            <li><span class="d">10-30</span><span class="c"><b>守夜人</b> 新增英文字幕轨，时间轴重对，共调整 27 条</span></li>
+            <li><span class="d">10-28</span><span class="c"><b>四个夏天</b> 纪录片音轨响度统一，前后差异由 3.2 LU 降到 0.8 LU</span></li>
+          </ul>
+        </section>
+
+        <!-- 4 分类入口 -->
+        <section class="section" id="channels" aria-labelledby="h-channels">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Channels</div>
+              <h2 id="h-channels">按类型与用途找片</h2>
+            </div>
+            <p class="sub">分类按观看场景划分，同一部作品可能出现在两个入口，但条目内容不重复。</p>
+          </div>
+          <div class="tag-index">
+            <a href="/#featured">原创长片剧场</a>
+            <a href="/#featured">竖屏短剧合集</a>
+            <a href="/#deep">导演解说音轨</a>
+            <a href="/#guide">幕后拍摄日志</a>
+            <a href="/#overview">非虚构纪实短片</a>
+            <a href="/#latest">字幕修订记录</a>
+            <a href="/#rank">本周播放榜单</a>
+            <a href="/#comments">观众观后感</a>
+            <a href="/#reco">分镜手稿专题</a>
+            <a href="/#news">主创访谈</a>
+            <a href="/#faq">清晰度与画幅</a>
+            <a href="/#timeline">片单时间线</a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section class="deep" id="deep" aria-labelledby="h-deep">
+          <h2 id="h-deep">深度解析：一集 26 分钟的短片，为什么值得拆成三个版本看</h2>
+          <p class="standfirst">判断先摆在这里：<strong>《雾港来信》第07集的 4K 母版与 1080P 版不是简单的降质关系，两版的暗部差异会改变观众对"信到底是谁写的"这一情节的理解。</strong>下面是可核对的依据，也欢迎反驳。</p>
+
+          <h3>母版规格差异：转码不是等比缩小</h3>
+          <p>第07集片尾制作名单标注母版为 4096×2160、24 帧、10bit 色深。1080P 版由母版转码，码率从约 48 Mbps 降到 8 Mbps。11 月 6 日同一批次替换的两版文件，时长都是 26 分 14 秒，音频同为 48 kHz，但灯下写信那场戏的暗部，1080P 版出现了明显的色带。</p>
+          <p>《雾港来信》摄影指导在 11 月 5 日的拍摄日志第3期里写，这场戏只用了一盏 200 W 的柔光灯加反光板，环境照度压得很低。也就是说，拍到的东西本来就在暗部，转码时先丢掉的就是它。这不是画质偏好问题，是场景信息问题。</p>
+          <table class="verify">
+            <caption>第07集两版文件的可核对差异（2026-11-06 替换批次）</caption>
+            <thead>
+              <tr><th scope="col">核对项</th><th scope="col">4K 母版</th><th scope="col">1080P 版</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>分辨率 / 帧率</td><td>4096×2160 / 24</td><td>1920×1080 / 24</td></tr>
+              <tr><td>码率（约）</td><td>48 Mbps</td><td>8 Mbps</td></tr>
+              <tr><td>色深</td><td>10bit</td><td>8bit</td></tr>
+              <tr><td>字幕版本</td><td>v2.1</td><td>v2.1</td></tr>
+              <tr><td>暗部色带</td><td>未见</td><td>灯下书写段落可见</td></tr>
+            </tbody>
+          </table>
+
+          <h3>三种版本的服务对象不同</h3>
+          <p>正片、导演解说音轨、幕后花絮，这三条轨道的时长和内容边界清楚。正片 26 分 14 秒；解说音轨同样 26 分 14 秒，导演在第 8 分 40 秒处说明了取景框为什么切掉右侧招牌；花絮 9 分 32 秒，包含同一个镜头的三次不同布光尝试。</p>
+          <p>把花絮当预告看会出问题。花絮第 6 分 12 秒出现了结尾场景的完整布景，包含道具信封的收件人姓名。10 月 30 日有观众在社区帖子里提到被这一段剧透，随后条目页在花絮开头加了一行文字提示，位置在播放器下方，不是弹出层。</p>
+
+          <div class="callout">
+            <b>可反驳的判断：</b>对剧情理解而言，1080P 版已经够用；但只要涉及"信是谁写的"这一线索，4K 母版的暗部信息更完整。判断成立的边界是：观众是否在意细节推理。如果只看人物关系走向，两版差别可以忽略。
+          </div>
+
+          <h3>解说音轨里的说法差异</h3>
+          <p>导演在解说音轨里说这场夜戏"拍了两晚"。场记单第 41 页记录的是 10 月 12 日与 10 月 14 日两个夜班，中间隔了一天。制片访谈里则说"连拍到凌晨三点"。三种说法不矛盾，但粒度不同：一个是拍摄天数，一个是具体日期，一个是收工时间。判断制作规模时，场记单比口述更硬。</p>
+          <p>需要区分事实与转述的地方就在这里。场记单属于拍摄记录，可核对；访谈属于转述，可能记忆偏差；解说音轨是创作方后来的自我解释，接近事实，但仍是叙述。</p>
+
+          <blockquote>
+            第 8 分 40 秒那个取景，右边招牌留着会抢观众的眼睛，所以切掉了。后面对话里提到的街名，反而要靠这个缺口让观众自己去补。
+            <cite>——《雾港来信》导演解说音轨，2026-11-06 上线</cite>
+          </blockquote>
+
+          <h3>更新节奏与观看顺序的关系</h3>
+          <p>主线 8 集，目前更新到第 07 集。第 01 至 03 集在同一天上线，之后每周五更新一集。第 06 集到第 07 集之间隔了 9 天，因为字幕地名核对延后了一次。这个时间差在片单里能看到，首播与更替是两列。</p>
+          <p>顺序建议来自结构而不是习惯：第 04 集结尾出现的信封，在第 05 集开头被重新拆读；先看第 07 集再回看第 04 集，会发现两处字迹不是同一人写的。这种信息在第 01 集也有铺垫，但埋得很浅，需要回头看才认得出。</p>
+        </section>
+
+        <!-- 6 体验指南 -->
+        <section class="section" id="guide" aria-labelledby="h-guide">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Guide</div>
+              <h2 id="h-guide">观看流程与设备设置建议</h2>
+            </div>
+            <p class="sub">按这套顺序走，多数人报告的问题会少一半：字幕对不上、暗部看不清、竖屏被拉伸。</p>
+          </div>
+          <ol class="steps">
+            <li><b>先确认片源版本</b>在条目页看"母版规格"与"字幕版本"两行。v2.1 之前的字幕有 9 处地名错误，边看边猜会误解地理关系。</li>
+            <li><b>按需切换清晰度</b>只看人物关系选 1080P；要看清信件字迹、招牌手写字选 4K。切换在同一播放器内完成，不重新起播。</li>
+            <li><b>竖屏内容别强制横屏</b>竖屏短剧的母版是横屏二次裁切，强制横屏会切掉画面顶部的手写字。手机端保持竖向，横屏版单独有入口。</li>
+            <li><b>暗部场景调亮度而非对比度</b>灯下书写那类段落，提高对比度会加深色带。先提亮度，再把环境光调暗，观感改善更明显。</li>
+            <li><b>花絮放最后看</b>花絮的时间顺序与正片不一致，且含结尾布景。看完正片再进，剧透风险归零。</li>
+          </ol>
+        </section>
+
+        <!-- 7 补充板块：榜单 -->
+        <section class="section" id="rank" aria-labelledby="h-rank">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Ranking</div>
+              <h2 id="h-rank">本周原创短片播放榜</h2>
+            </div>
+            <p class="sub">统计口径：11 月 1 日至 11 月 7 日，同一条目重复观看计一次完整播放。</p>
+          </div>
+          <ol class="rank-list">
+            <li><span class="t">雾港来信 第07集</span><span class="n">完成播放 18,420 次</span></li>
+            <li><span class="t">等路灯的人（竖屏版）</span><span class="n">完成播放 15,860 次</span></li>
+            <li><span class="t">守夜人 · 仓库十四小时</span><span class="n">完成播放 11,300 次</span></li>
+            <li><span class="t">旧城三公里 第02集</span><span class="n">完成播放 9,740 次</span></li>
+            <li><span class="t">四个夏天 第一集</span><span class="n">完成播放 7,210 次</span></li>
+            <li><span class="t">雾港来信 第06集</span><span class="n">完成播放 6,580 次</span></li>
+          </ol>
+        </section>
+
+        <!-- 8 补充板块：时间线 -->
+        <section class="section" id="timeline" aria-labelledby="h-timeline">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Timeline</div>
+              <h2 id="h-timeline">雾港来信 上线时间线</h2>
+            </div>
+            <p class="sub">只记已发生的事，日期以条目页首播列与更替列为准。</p>
+          </div>
+          <ul class="timeline">
+            <li><time datetime="2026-10-16">10 月 16 日</time><b>第 01—03 集同日上线</b><p>首次上线时字幕为 v1.0，片尾名单缺美术组两人，后于 10 月 31 日更正。</p></li>
+            <li><time datetime="2026-10-23">10 月 23 日</time><b>第 04 集</b><p>信封首次出现，片长 24 分 40 秒，是全剧最短一集。</p></li>
+            <li><time datetime="2026-10-30">10 月 30 日</time><b>第 05—06 集</b><p>字幕升到 v2.0，地名核对完成一轮，仍有 9 处待修。</p></li>
+            <li><time datetime="2026-11-05">11 月 5 日</time><b>拍摄日志第3期</b><p>公布分镜手稿 12 页，含被删掉的雨夜第二机位方案。</p></li>
+            <li><time datetime="2026-11-06">11 月 6 日</time><b>第 07 集与导演解说音轨</b><p>字幕 v2.1 同步替换，修订 9 处，涉及地图与街名。</p></li>
+          </ul>
+        </section>
+
+        <!-- 9 相关资讯 -->
+        <section class="section" id="news" aria-labelledby="h-news">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Notes</div>
+              <h2 id="h-news">相关资讯与主创动态</h2>
+            </div>
+            <p class="sub">每条只讲一件已确认的事，涉及口述的部分标明来源。</p>
+          </div>
+          <div class="grid g2">
+            <div class="card">
+              <h3>制片方回应花絮剧透</h3>
+              <p>10 月 31 日条目页更新说明：花絮开头加文字提示，位置在播放器下方，不做弹出层。回应只针对提示方式，未删改花絮内容。</p>
+              <span class="meta">10-31 条目页更新说明</span>
+            </div>
+            <div class="card">
+              <h3>摄影指导访谈：光源不足的取舍</h3>
+              <p>访谈中提到夜戏仅一盏 200 W 柔光灯，靠反光板补脸。属于转述，与拍摄日志第3期的布光示意可交叉核对。</p>
+              <span class="meta">11-02 主创访谈</span>
+            </div>
+            <div class="card">
+              <h3>竖屏版裁切二次调整</h3>
+              <p>11 月 3 日《等路灯的人》竖屏版字幕字号下调 1 级，原因是街口招牌文字与字幕重叠。</p>
+              <span class="meta">11-03 片源替换</span>
+            </div>
+            <div class="card">
+              <h3>《四个夏天》音轨响度统一</h3>
+              <p>前后响度差从 3.2 LU 收到 0.8 LU，属于技术修整，画面未变。</p>
+              <span class="meta">10-28 音轨替换</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10 FAQ -->
+        <section class="section faq" id="faq" aria-labelledby="h-faq">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">FAQ</div>
+              <h2 id="h-faq">观看前常问的六个问题</h2>
+            </div>
+            <p class="sub">答案只针对条目页当前状态，片源替换后以新文件为准。</p>
+          </div>
+          <details>
+            <summary>原创短片和系列剧集在观看顺序上有区别吗？</summary>
+            <div class="ans">单集短片可以任意顺序看，系列剧集按第 01 集到第 08 集的编号顺序看。人物关系和伏笔跨集埋设，第 04 集信封与第 05 集拆读是同一线索的两段。</div>
+          </details>
+          <details>
+            <summary>幕后花絮适合先看还是后看？</summary>
+            <div class="ans">正片没看完之前先看容易被剧透。花絮第 6 分 12 秒出现了结尾场景的完整布景，含道具信封收件人姓名。只想了解制作流程，可以先看拍摄日志第3期，那一期不含结局信息。</div>
+          </details>
+          <details>
+            <summary>不同清晰度的版本画幅会变化吗？</summary>
+            <div class="ans">画幅不变。1080P 与 4K 是同一版母版转码，裁切一致。差别在码率、色深和暗部细节，1080P 版在灯下书写段落可见色带。</div>
+          </details>
+          <details>
+            <summary>创作者访谈里的说法能当作制作事实吗？</summary>
+            <div class="ans">访谈属于转述。涉及成本、拍摄天数、收工时间的说法，要与片尾制作名单和场记单交叉核对。场记单第 41 页记录的是两个夜班，与"拍了两晚"一致；"连拍到凌晨三点"指的是收工时间，粒度不同。</div>
+          </details>
+          <details>
+            <summary>观看入口标注的更新时间指什么？</summary>
+            <div class="ans">指该条目的片源或字幕文件最后一次替换时间，不是作品首播时间。两者在片单里分列两栏，例如第 07 集首播 11 月 6 日，字幕 v2.1 也在同日替换。</div>
+          </details>
+          <details>
+            <summary>竖屏短剧为什么还有横屏版？</summary>
+            <div class="ans">母版是横屏拍摄，竖屏版为二次裁切。横屏版保留了画面左右两侧的招牌手写字，竖屏版会切掉一部分。两版时长一致，可以对照看。</div>
+          </details>
+        </section>
+
+        <!-- 11 用户评论 -->
+        <section class="section" id="comments" aria-labelledby="h-comments">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Comments</div>
+              <h2 id="h-comments">观众观后感</h2>
+            </div>
+            <p class="sub">按内容相关性挑选，保留不同意见，包括吐槽。</p>
+          </div>
+          <div class="comments">
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">程</div>
+              <div>
+                <div class="who">程屿 <span>11-07</span></div>
+                <p>4K 版灯下写信那场戏，信纸边角的污渍看得清，1080P 版完全糊成一块。为了这个细节换设备，我觉得值。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">林</div>
+              <div>
+                <div class="who">林可 <span>11-06</span></div>
+                <p>第 07 集节奏比第 06 集慢，解释性对白太多。26 分钟里大概有 7 分钟在铺垫，虽然结尾那封信翻出来时确实起了作用。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">阿</div>
+              <div>
+                <div class="who">阿玄 <span>11-05</span></div>
+                <p>花絮第 6 分 12 秒那个布景，直接把信封收件人名字摆出来了。剧透提示加得太晚，我是看完才看到那行字的。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">周</div>
+              <div>
+                <div class="who">周日午后 <span>11-04</span></div>
+                <p>《守夜人》全程没解说，一开始有点不习惯，看到仓库排班表被镜头扫过两次，才明白为什么要这么拍。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">许</div>
+              <div>
+                <div class="who">许清 <span>11-03</span></div>
+                <p>《等路灯的人》竖屏版字幕字号调小之后舒服多了，原来遮挡招牌上的手写字，现在是能看清的。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">何</div>
+              <div>
+                <div class="who">何夕 <span>11-01</span></div>
+                <p>导演解说音轨信息密度高，第 8 分 40 秒那段解释了取景取舍，比正片本身还值得听一遍。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">袁</div>
+              <div>
+                <div class="who">袁野 <span>10-30</span></div>
+                <p>《旧城三公里》第 02 集片尾名单改了，美术助理从两人变三人。这种更正说明制作方还愿意回头改，不算小事。</p>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="avatar" aria-hidden="true">钟</div>
+              <div>
+                <div class="who">钟叙 <span>10-29</span></div>
+                <p>《四个夏天》人物太多，第一集看下来只记住了两位受访者。可能需要连着看第二集才顺。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12 相关推荐 -->
+        <section class="section" id="reco" aria-labelledby="h-reco">
+          <div class="sec-head">
+            <div>
+              <div class="sec-kicker">Related</div>
+              <h2 id="h-reco">相关推荐</h2>
+            </div>
+            <p class="sub">按题材、规格、用途三个方向各推荐几条，点击直达对应板块。</p>
+          </div>
+          <div class="reco">
+            <a href="/#featured">雾港来信分集片单</a>
+            <a href="/#guide">导演解说音轨怎么开</a>
+            <a href="/#deep">暗部色带的成因</a>
+            <a href="/#latest">字幕 v2.1 修订清单</a>
+            <a href="/#guide">竖屏短剧观看设置</a>
+            <a href="/#timeline">拍摄日志第3期要点</a>
+            <a href="/#rank">本周竖屏短剧榜单</a>
+            <a href="/#news">纪实短片拍摄地整理</a>
+            <a href="/#overview">片尾制作名单读法</a>
+            <a href="/#faq">4K 与 1080P 对照</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side-col" aria-label="辅助导航与更新摘要">
+
+        <div class="side-box">
+          <h2>栏目导航</h2>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#featured">精选片单</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#channels">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#rank">本周榜单</a></li>
+            <li><a href="/#timeline">上线时间线</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">观众评论</a></li>
+            <li><a href="/#reco">相关推荐</a></li>
+          </ul>
+          <p class="side-note">滚动页面时，高亮会跟随当前板块。</p>
+        </div>
+
+        <div class="side-box">
+          <h2>本周值得回看</h2>
+          <ul class="side-links">
+            <li><a href="/#featured">雾港来信 第07集 · 26 分钟</a><span class="meta">11-06 更新 · 4K 母版</span></li>
+            <li><a href="/#featured">等路灯的人（竖屏版）· 3 分钟</a><span class="meta">11-03 补横屏母版</span></li>
+            <li><a href="/#featured">守夜人 · 仓库十四小时 · 18 分钟</a><span class="meta">10-30 增英文字幕</span></li>
+            <li><a href="/#timeline">拍摄日志第3期 · 分镜 12 页</a><span class="meta">11-05 发布</span></li>
+          </ul>
+        </div>
+
+        <div class="side-box">
+          <h2>创作者的话</h2>
+          <p class="creator-quote">"夜戏只有一盏 200 W 的灯，光不够就得靠反光板找位置。观众看不清的地方，我们其实也看不清。"</p>
+          <cite style="display:block;margin-top:8px;font-size:12.5px;color:var(--muted);font-style:normal">——《雾港来信》摄影指导，11-02 访谈</cite>
+          <p class="side-note">引语为访谈转述，布光细节与拍摄日志第3期示意图可交叉核对。</p>
+        </div>
+
+        <div class="side-box">
+          <h2>核对提示</h2>
+          <ul class="side-links">
+            <li>母版规格看条目页第一段</li>
+            <li>字幕版本以 v2.1 为准</li>
+            <li>首播与更替分两列记录</li>
+            <li>口述信息需与场记单核对</li>
+          </ul>
+          <p class="side-note">本页条目均为示例数据，用于展示整理方式。</p>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="site-foot">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#f2c14e"/>
+          <path d="M16 44V20l16 9 16-9v24l-16-9z" fill="#12382f"/>
+        </svg>
+        <span>艾彩原创视频观看</span>
+      </div>
+      <p class="foot-desc">把原创短片、系列剧集、纪实作品和幕后档案按日期与规格分列，让每一条都能对得上片源、字幕和制作名单。</p>
+    </div>
+    <div>
+      <h3>内容类型</h3>
+      <ul class="foot-list">
+        <li><a href="/#featured">原创长片剧场</a></li>
+        <li><a href="/#featured">竖屏短剧合集</a></li>
+        <li><a href="/#overview">非虚构纪实短片</a></li>
+        <li><a href="/#guide">幕后拍摄日志</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>使用帮助</h3>
+      <ul class="foot-list">
+        <li><a href="/#guide">观看流程与设备设置</a></li>
+        <li><a href="/#faq">清晰度与画幅问题</a></li>
+        <li><a href="/#latest">字幕修订记录</a></li>
+        <li><a href="/#deep">版本差异解析</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>近期更新</h3>
+      <ul class="foot-list">
+        <li><a href="/#timeline">第 07 集上线时间线</a></li>
+        <li><a href="/#news">主创访谈与回应</a></li>
+        <li><a href="/#rank">本周播放榜单</a></li>
+        <li><a href="/#comments">观众观后感</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>示例数据说明：站内片名、主创、播放数据与更新日期均为演示用示例条目，不对应真实作品。</span>
+    <span>页面整理更新：2026-11-08 · 对应正文可核对项：第 07 集更替、字幕 v2.1、拍摄日志第3期</span>
+  </div>
+  <div class="foot-bottom" style="border-top:none;padding-top:0">
+    <span>© 2026 艾彩原创视频观看 · 内容整理示例</span>
+    <span>按类型、日期与制作规格归档</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 移动端菜单 */
+  var menuBtn = document.getElementById('menuBtn');
+  var headNav = document.getElementById('headNav');
+  function closeMenu(){
+    headNav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+  }
+  menuBtn.addEventListener('click', function(){
+    var open = headNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  headNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ closeMenu(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeMenu(); closeSearch(); }
+  });
+
+  /* 平滑滚动（预留吸顶偏移） */
+  var stick = function(){
+    var s = getComputedStyle(document.documentElement);
+    var a = parseInt(s.getPropertyValue('--ann-h'),10) || 44;
+    var h = parseInt(s.getPropertyValue('--head-h'),10) || 64;
+    return a + h + 14;
+  };
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="/#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(2);
+    var target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    var y = target.getBoundingClientRect().top + window.pageYOffset - stick();
+    window.scrollTo({top: Math.max(y,0), behavior:'smooth'});
+    if(history.replaceState){ history.replaceState(null,'','/'+'#'+id); }
+  });
+
+  /* 搜索（本地查找） */
+  var q = document.getElementById('q');
+  var result = document.getElementById('searchResult');
+  var index = [];
+  document.querySelectorAll('main h2, main h3, main .card p, main .mini-list .c, main summary, .reco a').forEach(function(el){
+    var text = (el.textContent || '').replace(/\s+/g,' ').trim();
+    if(text.length < 4) return;
+    var host = el.closest('[id]') || el.closest('section') || el;
+    var id = host.id || 'top';
+    index.push({text: text, id: id});
+  });
+  function closeSearch(){ result.classList.remove('open'); result.innerHTML=''; }
+  function esc(s){ return s.replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  q.addEventListener('input', function(){
+    var kw = q.value.trim();
+    if(!kw){ closeSearch(); return; }
+    var seen = {}, hits = [];
+    index.forEach(function(item){
+      if(item.text.indexOf(kw) > -1 && !seen[item.id + item.text]){
+        seen[item.id + item.text] = 1;
+        hits.push(item);
+      }
+    });
+    if(!hits.length){
+      result.innerHTML = '<div class="empty">没有找到与“' + esc(kw) + '”相关的条目。可试试“雾港来信”“字幕”“竖屏”或“解说音轨”。</div>';
+    } else {
+      result.innerHTML = hits.slice(0,8).map(function(it){
+        return '<a href="/#' + it.id + '" role="option">' + esc(it.text.slice(0,42)) + (it.text.length>42?'…':'') + '</a>';
+      }).join('');
+    }
+    result.classList.add('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-wrap')){ closeSearch(); }
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.pageYOffset > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+    highlight();
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 侧栏滚动高亮 */
+  var links = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = links.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(2));
+  }).filter(Boolean);
+  function highlight(){
+    var pos = window.pageYOffset + stick() + 20;
+    var current = sections[0];
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= pos){ current = sec; }
+    });
+    links.forEach(function(a){
+      var on = current && a.getAttribute('href') === '/#' + current.id;
+      a.classList.toggle('active', on);
+      if(on){ a.setAttribute('aria-current','true'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+})();
+</script>
+</body>
+  </html>
