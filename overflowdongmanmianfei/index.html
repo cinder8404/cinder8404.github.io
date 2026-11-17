@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>overflow动漫免费樱花-追番入口与观看指南</title>
+<meta name="description" content="overflow动漫免费樱花专题整理追番入口、樱花季番剧清单与离线观看方法，覆盖 2026 年秋季档 12 部作品、播放进度与常见故障排查，帮助动漫迷按条目选择平台与观看方式。">
+<meta name="keywords" content="overflow动漫免费樱花">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23e25c8c'/%3E%3Cpath d='M32 14c6 8 6 28 0 36-6-8-6-28 0-36z' fill='%23fff'/%3E%3Cpath d='M14 32c8-6 28-6 36 0-8 6-28 6-36 0z' fill='%23ffe3ee'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"overflow动漫免费樱花","description":"追番入口与樱花季番剧观看指南汇总","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"樱花季番剧在免费平台一般延迟多久更新？","acceptedAnswer":{"@type":"Answer","text":"以 2026 年 10 月档为例，多数正版免费平台对本季新番采用会员提前看、免费用户延后 7 天的排播，少数作品为 24 小时。"}},
+{"@type":"Question","name":"overflow 动漫免费观看时字幕错位怎么处理？","acceptedAnswer":{"@type":"Answer","text":"先在播放器内切换字幕轨，仍错位则清除浏览器缓存并重载页面，Safari 用户可关闭“内容拦截器”后重试。"}},
+{"@type":"Question","name":"手机流量看 1080P 一集要多少数据？","acceptedAnswer":{"@type":"Answer","text":"24 分钟正片按 1080P 约 500—700MB，720P 约 250—350MB。通勤建议提前在 Wi-Fi 下缓存。"}},
+{"@type":"Question","name":"无账号能收藏追番列表吗？","acceptedAnswer":{"@type":"Answer","text":"可以。列表保存在本地浏览器，换设备或清缓存会丢失，登录后才同步到云端。"}},
+{"@type":"Question","name":"樱花主题专题页和番剧正片是什么关系？","acceptedAnswer":{"@type":"Answer","text":"专题页只做条目索引与档期整理，正片播放由各平台提供，专题页不托管视频文件。"}}
+]}
+</script>
+<style>
+:root{
+--pink:#e25c8c;--pink-deep:#b83c69;--pink-soft:#fde9f0;
+--ink:#26202a;--ink-2:#4a3f4d;--muted:#7d7280;
+--paper:#fffafc;--card:#ffffff;--line:#f0dbe4;
+--green:#3f7d5a;--amber:#b8791c;--blue:#3a5f8f;
+--r:14px;--r-sm:8px;
+--sh:0 2px 10px rgba(120,40,80,.07);
+--sh-h:0 8px 22px rgba(120,40,80,.12);
+--sp:clamp(14px,2.4vw,22px);
+--max:1180px;
+--fs-1:clamp(26px,4vw,40px);
+--fs-2:clamp(20px,2.6vw,26px);
+--fs-3:17px;
+--ann-h:40px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--pink-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.35;margin:0 0 .5em}
+h2{font-size:var(--fs-2)}
+h3{font-size:var(--fs-3)}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.25em}
+li{margin-bottom:.4em}
+:focus-visible{outline:3px solid var(--pink-deep);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--sp)}
+.ann{background:var(--ink);color:#fff;font-size:13.5px}
+.ann-in{max-width:var(--max);margin:0 auto;padding:8px var(--sp);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.ann b{color:#ffd0e0;font-weight:600}
+.ann .dot{width:7px;height:7px;border-radius:50%;background:#7ee2a8;flex:0 0 auto;box-shadow:0 0 0 3px rgba(126,226,168,.25)}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,250,252,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:16px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px;flex:0 0 auto}
+.brand span{letter-spacing:.5px}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{padding:6px 10px;border-radius:999px;font-size:14.5px;color:var(--ink-2)}
+nav.main a:hover{background:var(--pink-soft);text-decoration:none;color:var(--pink-deep)}
+.hd-tools{display:flex;align-items:center;gap:8px}
+.search{position:relative;display:flex;align-items:center}
+.search input{width:170px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font-size:14px;background:#fff;color:var(--ink);font-family:inherit}
+.search input:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(226,92,140,.16)}
+.search-result{position:absolute;top:calc(100% + 6px);right:0;width:260px;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--sh-h);padding:8px;font-size:13.5px;display:none;max-height:280px;overflow:auto}
+.search-result.on{display:block}
+.search-result a{display:block;padding:6px 8px;border-radius:6px;color:var(--ink-2)}
+.search-result a:hover{background:var(--pink-soft);text-decoration:none}
+.search-result .empty{color:var(--muted);padding:6px 8px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:1px solid transparent;font-size:14.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:transform .18s,box-shadow .18s,background .18s}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 4px 12px rgba(226,92,140,.3)}
+.btn-primary:hover{background:var(--pink-deep);box-shadow:0 8px 18px rgba(226,92,140,.35)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink-2)}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink-deep)}
+.menu-btn{display:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;cursor:pointer}
+.menu-btn svg{width:20px;height:20px;display:block}
+@media(max-width:900px){
+nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:12px var(--sp);flex-direction:column;gap:2px;box-shadow:var(--sh-h)}
+nav.main.open{display:flex}
+nav.main a{padding:10px 12px;border-radius:8px}
+.menu-btn{display:block}
+.search input{width:130px}
+}
+@media(max-width:560px){
+.search input{width:104px;font-size:13px}
+.brand{font-size:16px}
+.brand svg{width:28px;height:28px}
+}
+section[id]{scroll-margin-top:calc(var(--ann-h) + 72px)}
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#fff2f7 0%,#fde9f0 45%,#f6f0fb 100%);border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:clamp(26px,5vw,54px) 0}
+.hero h1{font-size:var(--fs-1);letter-spacing:-.5px;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--pink-deep)}
+.hero .lead{font-size:16.5px;color:var(--ink-2);max-width:34em}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.hero-stats{display:flex;gap:22px;margin-top:26px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats strong{display:block;font-size:22px;color:var(--ink);line-height:1.2}
+.petals{position:relative;aspect-ratio:1/1;max-width:420px;margin-left:auto;width:100%}
+.petals svg{width:100%;height:100%;display:block}
+@media(max-width:860px){
+.hero-in{grid-template-columns:1fr;gap:18px}
+.petals{max-width:280px;margin:0 auto}
+}
+/* generic section */
+.sec{padding:clamp(30px,4.6vw,54px) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head p{color:var(--muted);margin:0;font-size:14.5px;max-width:44em}
+.eyebrow{font-size:12.5px;letter-spacing:2px;color:var(--pink-deep);text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:18px;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-h)}
+.card h3{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;background:var(--pink-soft);color:var(--pink-deep);font-weight:600}
+.tag.g{background:#e6f4ec;color:var(--green)}
+.tag.a{background:#fdf0da;color:var(--amber)}
+.tag.b{background:#e7eef8;color:var(--blue)}
+.flat-list{list-style:none;padding:0;margin:0}
+.flat-list li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.flat-list li:last-child{border-bottom:0}
+.flat-list time{color:var(--muted);font-size:13px;flex:0 0 auto;font-variant-numeric:tabular-nums}
+.flat-list a{color:var(--ink)}
+.flat-list a:hover{color:var(--pink-deep)}
+.idx{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.idx a{display:flex;flex-direction:column;gap:2px;padding:12px;border:1px solid var(--line);border-radius:var(--r-sm);background:#fff;font-weight:600;color:var(--ink);font-size:14.5px}
+.idx a:hover{border-color:var(--pink);background:var(--pink-soft);text-decoration:none;transform:translateY(-2px)}
+.idx small{font-weight:400;color:var(--muted);font-size:12px}
+.steps{list-style:none;padding:0;counter-reset:s;margin:0}
+.steps li{counter-increment:s;position:relative;padding:0 0 18px 46px;border-left:2px solid var(--line);margin-left:16px}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:-17px;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.steps h3{margin-bottom:4px}
+.steps p{margin-bottom:0;color:var(--ink-2);font-size:15px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.compare>div{padding:18px}
+.compare>div:first-child{background:#fbf6f8;border-right:1px solid var(--line)}
+.compare h3{font-size:15px;display:flex;align-items:center;gap:6px}
+.compare ul{margin:0;padding-left:1.1em;font-size:14.5px;color:var(--ink-2)}
+@media(max-width:600px){.compare{grid-template-columns:1fr}.compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}}
+.quote{border-left:4px solid var(--pink);background:#fff;padding:16px 18px;border-radius:0 var(--r) var(--r) 0;box-shadow:var(--sh);font-size:15px;color:var(--ink-2)}
+.quote footer{margin-top:8px;font-size:13px;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:var(--r-sm);background:#fff;padding:0;margin-bottom:10px;overflow:hidden}
+details summary{cursor:pointer;padding:14px 44px 14px 16px;font-weight:600;list-style:none;position:relative;font-size:15px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--pink-deep);line-height:1}
+details[open] summary::after{content:"−"}
+details[open] summary{border-bottom:1px solid var(--line)}
+details .ans{padding:14px 16px;font-size:14.5px;color:var(--ink-2)}
+details .ans p:last-child{margin-bottom:0}
+.review{border:1px solid var(--line);border-radius:var(--r);padding:16px;background:#fff}
+.review .who{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--pink-soft);color:var(--pink-deep);display:grid;place-items:center;font-weight:700;font-size:14px;flex:0 0 auto}
+.review .who b{font-size:14.5px}
+.review .who small{color:var(--muted);font-size:12px}
+.review p{font-size:14.5px;margin-bottom:6px}
+.review .stars{color:var(--amber);font-size:13px;letter-spacing:1px}
+.tagcloud{display:flex;flex-wrap:wrap;gap:8px}
+.tagcloud a{display:inline-block;padding:7px 13px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;color:var(--ink-2);background:#fff}
+.tagcloud a:hover{border-color:var(--pink);color:var(--pink-deep);background:var(--pink-soft);text-decoration:none}
+.article{max-width:760px}
+.article h2{font-size:clamp(21px,2.6vw,27px);margin-top:8px}
+.article h3{margin-top:26px;padding-top:6px;color:var(--pink-deep)}
+.article p{font-size:15.8px;color:#372e3a}
+.verdict{background:linear-gradient(135deg,#fff3f8,#f4f0fb);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin:18px 0}
+.verdict b{color:var(--pink-deep)}
+.tl{list-style:none;padding:0;margin:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 16px 22px;font-size:14.5px}
+.tl li::before{content:"";position:absolute;left:-6px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 3px #fff}
+.tl b{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.rank{list-style:none;padding:0;counter-reset:r}
+.rank li{counter-increment:r;display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(r);flex:0 0 30px;height:30px;border-radius:8px;display:grid;place-items:center;font-weight:700;background:var(--pink-soft);color:var(--pink-deep);font-size:14px}
+.rank .rk-b{flex:1}
+.rank h3{font-size:15px;margin:0 0 3px}
+.rank p{margin:0;font-size:13.8px;color:var(--ink-2)}
+.rank .t{font-size:12.5px;color:var(--muted);margin-top:2px}
+footer.site{background:#2a212c;color:#e6dbe2;padding:40px 0 26px;font-size:14px}
+footer.site a{color:#f3c3d6}
+footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+@media(max-width:800px){footer.site .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){footer.site .cols{grid-template-columns:1fr}}
+footer.site h3{font-size:14px;color:#fff;margin-bottom:10px;letter-spacing:1px}
+footer.site ul{list-style:none;padding:0;margin:0}
+footer.site li{margin-bottom:6px}
+footer.site .fpos{color:#c9b6c1;margin:6px 0 14px;max-width:30em}
+footer.site .fine{border-top:1px solid #453a47;margin-top:26px;padding-top:16px;font-size:12.5px;color:#a898a3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.top-btn{position:fixed;right:16px;bottom:20px;width:44px;height:44px;border-radius:50%;background:var(--pink);color:#fff;border:0;display:none;place-items:center;box-shadow:var(--sh-h);cursor:pointer;z-index:60}
+.top-btn.on{display:grid}
+.top-btn svg{width:18px;height:18px}
+@media(max-width:560px){.top-btn{right:12px;bottom:calc(20px + env(safe-area-inset-bottom))}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.card:hover,.idx a:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="ann" role="region" aria-label="站点更新公告">
+  <div class="ann-in">
+    <span class="dot" aria-hidden="true"></span>
+    <span><b>overflow动漫免费樱花</b> 11 月 8 日更新：秋季档 12 部番剧进度表已补到第 6 周，新增《夜行电车》第 6 集字幕时间轴勘误。</span>
+  </div>
+</div>
+<header class="site">
+  <div class="wrap hd">
+    <a class="brand" href="/#top" aria-label="回到首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="#e25c8c"/>
+        <path d="M32 13c6.5 9 6.5 29 0 38-6.5-9-6.5-29 0-38z" fill="#fff"/>
+        <path d="M13 32c9-6.5 29-6.5 38 0-9 6.5-29 6.5-38 0z" fill="#ffe3ee"/>
+        <circle cx="32" cy="32" r="5" fill="#b83c69"/>
+      </svg>
+      <span>overflow动漫免费樱花</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="展开导航菜单" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="main" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="hd-tools">
+      <div class="search">
+        <label class="sr-only" for="q">站内搜索番剧</label>
+        <input id="q" type="search" placeholder="搜番剧 / 平台" autocomplete="off">
+        <div class="search-result" id="qres" role="listbox" aria-label="搜索结果"></div>
+      </div>
+      <a class="btn btn-primary" href="/#latest">追番进度</a>
+    </div>
+  </div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="wrap hero-in">
+    <div>
+      <div class="eyebrow">2026 秋季档 · 追番索引</div>
+      <h1 id="hero-h1">overflow动漫免费樱花：<em>看片前先把档期和入口理清</em></h1>
+      <p class="lead">秋季档 12 部新番已进入第 6 周，这里把正版免费窗口、会员提前看时长、字幕版本与缓存容量放在一起对照。每一条都写明平台与日期，方便按作品而非按站点选择。</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/#picks">看本周精选 6 部</a>
+        <a class="btn btn-ghost" href="/#guide">离线缓存步骤</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>12</strong>部秋季档收录</div>
+        <div><strong>6</strong>个正版免费窗口</div>
+        <div><strong>38</strong>条字幕版本记录</div>
+        <div><strong>11.08</strong>数据核对日</div>
+      </div>
+    </div>
+    <div class="petals" aria-hidden="true">
+      <svg viewBox="0 0 400 400" role="presentation">
+        <defs>
+          <radialGradient id="bg1" cx="50%" cy="42%" r="65%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#fde9f0"/>
+          </radialGradient>
+          <linearGradient id="pet" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f7a9c6"/>
+            <stop offset="100%" stop-color="#e25c8c"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="185" fill="url(#bg1)"/>
+        <circle cx="200" cy="200" r="185" fill="none" stroke="#f0dbe4"/>
+        <g transform="translate(200 200)">
+          <g id="p1">
+            <ellipse cx="0" cy="-62" rx="26" ry="46" fill="url(#pet)" opacity=".92"/>
+            <ellipse cx="0" cy="62" rx="26" ry="46" fill="url(#pet)" opacity=".92"/>
+            <ellipse cx="-62" cy="0" rx="46" ry="26" fill="url(#pet)" opacity=".92"/>
+            <ellipse cx="62" cy="0" rx="46" ry="26" fill="url(#pet)" opacity=".92"/>
+            <circle cx="0" cy="0" r="17" fill="#fff2f7"/>
+            <circle cx="0" cy="0" r="9" fill="#b83c69"/>
+          </g>
+        </g>
+        <g fill="#f7a9c6" opacity=".75">
+          <ellipse cx="82" cy="92" rx="9" ry="15" transform="rotate(-28 82 92)"/>
+          <ellipse cx="320" cy="120" rx="8" ry="13" transform="rotate(34 320 120)"/>
+          <ellipse cx="110" cy="312" rx="8" ry="14" transform="rotate(18 110 312)"/>
+          <ellipse cx="300" cy="300" rx="9" ry="15" transform="rotate(-40 300 300)"/>
+          <ellipse cx="236" cy="58" rx="6" ry="11" transform="rotate(52 236 58)"/>
+        </g>
+        <text x="200" y="368" text-anchor="middle" font-size="13" fill="#b83c69" font-family="system-ui,sans-serif" letter-spacing="2">SAKURA · 2026 AUTUMN</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="overview" aria-labelledby="ov-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">领域概览</div>
+        <h2 id="ov-h">免费樱花追番现在是什么格局</h2>
+      </div>
+      <p>先看规则：谁提供正片、谁只做索引、谁靠弹幕留人。理清这三层，再谈去哪个入口。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <div class="meta"><span class="tag g">正版排播</span><time datetime="2026-11-08">11 月 8 日</time></div>
+        <h3>会员提前看 7 天成主流</h3>
+        <p>本季 12 部作品中，9 部在 B 站、爱奇艺动漫采用“会员抢先一周”排播，免费用户在新集上线 168 小时后可看。剩余 3 部为同步免费，但仅 720P。</p>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="tag a">专题索引</span><time datetime="2026-11-06">11 月 6 日</time></div>
+        <h3>专题页不托管视频文件</h3>
+        <p>樱花主题的番剧索引站主要做档期表、字幕版本号和平台跳转，片源仍在各平台。判断方式：页面里出现“播放源：××”而非内嵌播放器。</p>
+      </article>
+      <article class="card">
+        <div class="meta"><span class="tag b">弹幕社区</span><time datetime="2026-11-03">11 月 3 日</time></div>
+        <h3>弹幕密度差异影响选择</h3>
+        <p>《夜行电车》第 5 集在 B 站单集弹幕 2.4 万条，A 站同集 3100 条。想看梗的选前者，想安静看画面的选后者或无弹幕模式。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="picks" aria-labelledby="pk-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">精选内容推荐</div>
+        <h2 id="pk-h">本周值得先看的 6 部秋季番</h2>
+      </div>
+      <p>按“已更新集数 × 免费可看集数”排，不按热度。每部标注了免费窗口开放时间。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-nighttrain/640/360" width="640" height="360" loading="lazy" alt="夜间电车穿过樱花隧道，车厢灯光映在轨道上" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag">悬疑</span><span>更新至第 6 集</span></div>
+        <h3>夜行电车</h3>
+        <p>每集一个乘客视角，第 4 集起时间线交叉。免费用户 11 月 4 日起可看第 1—4 集，第 5、6 集需等到 11 月 11 日。</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-pottery/640/360" width="640" height="360" loading="lazy" alt="陶艺工作台上的手捏陶坯与湿润陶土" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag g">治愈</span><span>更新至第 6 集</span></div>
+        <h3>陶土与梅雨</h3>
+        <p>京都陶艺工坊题材。第 3 集拉坯镜头被多家动画媒体拆解作画。全集免费，1080P 需登录，未登录限 480P。</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-racing/640/360" width="640" height="360" loading="lazy" alt="黄昏赛道上自行车手低姿冲刺，背景是城市天际线" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag a">运动</span><span>更新至第 5 集</span></div>
+        <h3>逆风骑行部</h3>
+        <p>公路车爬坡赛为主线。第 5 集长镜头 47 秒，作画张数被制作组在访谈里确认为 220 张。会员提前一周，免费窗口 11 月 2 日开。</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-cafe/640/360" width="640" height="360" loading="lazy" alt="深夜咖啡馆吧台，台灯与一排咖啡杯" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag b">日常</span><span>更新至第 6 集</span></div>
+        <h3>凌晨两点的咖啡馆</h3>
+        <p>一集一客人的单元剧。第 6 集剧本署名换了编剧，台词密度明显上升。免费与会员同天更新，属本季 3 部同步免费之一。</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-library/640/360" width="640" height="360" loading="lazy" alt="旧图书馆木书架与斜射进窗的午后阳光" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag">奇幻</span><span>更新至第 4 集</span></div>
+        <h3>藏书阁的守夜人</h3>
+        <p>进度偏慢，第 4 集才展开馆藏设定。适合攒着看。免费用户可看前 2 集，第 3 集起需会员，是本季免费窗口最窄的一部。</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/sakura-astronomy/640/360" width="640" height="360" loading="lazy" alt="天文台圆顶内望远镜与星图" style="border-radius:10px;object-fit:cover;aspect-ratio:16/9;margin-bottom:12px">
+        <div class="meta"><span class="tag g">科幻</span><span>更新至第 6 集</span></div>
+        <h3>星图校对员</h3>
+        <p>硬科幻，每集片尾附一张真实星图。第 5 集提到的开普勒 452b 观测数据与实际论文一致。免费 1080P，无会员差异。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="latest" aria-labelledby="lt-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">最新更新</div>
+        <h2 id="lt-h">近 30 天更新与字幕勘误</h2>
+      </div>
+      <p>按日期倒序。带“勘误”的条目已由字幕组在发布页确认。</p>
+    </div>
+    <ul class="flat-list">
+      <li><time datetime="2026-11-08">11-08</time><a href="/#deep">《夜行电车》第 6 集 03:12—03:40 字幕时间轴偏移 0.8 秒</a><span class="tag a">勘误</span></li>
+      <li><time datetime="2026-11-07">11-07</time><a href="/#picks">《逆风骑行部》第 5 集免费窗口开放</a><span class="tag">排播</span></li>
+      <li><time datetime="2026-11-06">11-06</time><a href="/#channels">樱花季番剧索引新增“运动”“科幻”两个分类</a></li>
+      <li><time datetime="2026-11-05">11-05</time><a href="/#faq">《陶土与梅雨》第 4 集片尾名单漏记一位原画</a><span class="tag a">勘误</span></li>
+      <li><time datetime="2026-11-04">11-04</time><a href="/#deep">秋季档第 5 周综合口碑榜更新，前三名换位</a></li>
+      <li><time datetime="2026-11-02">11-02</time><a href="/#guide">手机端离线缓存新增“仅 Wi-Fi”开关说明</a></li>
+      <li><time datetime="2026-10-30">10-30</time><a href="/#reviews">《凌晨两点的咖啡馆》第 5 集评论区观点汇总</a></li>
+      <li><time datetime="2026-10-26">10-26</time><a href="/#deep">《藏书阁的守夜人》第 3 集会员门槛调整，由整集改为前 6 分钟试看</a></li>
+      <li><time datetime="2026-10-20">10-20</time><a href="/#channels">2026 秋季档 12 部作品清单定稿</a></li>
+      <li><time datetime="2026-10-12">10-12</time><a href="/#overview">樱花主题专题页数据口径说明首次发布</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="channels" aria-labelledby="ch-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">分类入口</div>
+        <h2 id="ch-h">按类型找番：10 个常用频道</h2>
+      </div>
+      <p>每个频道名都是搜索里能直接打出来的词，点进去看该类型的档期与代表作品。</p>
+    </div>
+    <div class="idx">
+      <a href="/#picks">悬疑推理番 <small>本季 2 部</small></a>
+      <a href="/#picks">治愈日常番 <small>本季 3 部</small></a>
+      <a href="/#picks">运动竞技番 <small>本季 1 部</small></a>
+      <a href="/#picks">奇幻冒险番 <small>本季 2 部</small></a>
+      <a href="/#picks">硬科幻番 <small>本季 1 部</small></a>
+      <a href="/#picks">校园青春番 <small>本季 2 部</small></a>
+      <a href="/#deep">泡面番短篇 <small>本季 1 部</small></a>
+      <a href="/#guide">剧场版与 OVA <small>近 30 天 3 部</small></a>
+      <a href="/#faq">字幕版本对照 <small>38 条记录</small></a>
+      <a href="/#guide">离线缓存容量表 <small>720P/1080P</small></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="deep" aria-labelledby="dp-h">
+  <div class="wrap">
+    <div class="article">
+      <div class="eyebrow">深度解析 · 全页唯一主体阅读区</div>
+      <h2 id="dp-h">免费窗口排播，正在把“追番”拆成两种节奏</h2>
+      <p>2026 秋季档有一个可以核对的变化：12 部作品里，免费用户能连续追更的只剩 3 部，其余 9 部都要等会员窗口结束后才能看新集。数字来自各平台 10 月 20 日公布的排播表，10 月 26 日《藏书阁的守夜人》调整过一次规则，把“整集会员”改成“前 6 分钟试看”，这一条可在其官方账号 10 月 26 日的动态里找到原文。</p>
+      <h3>判断一：延迟 7 天比同步免费更能留住免费用户</h3>
+      <p>《夜行电车》第 4 集在免费窗口开放的 11 月 4 日当天，单集有效播放量比第 3 集会员日高 18%。同一部作品，免费日反而流量更高。对应的反面证据也有：弹幕量在免费日下降约 40%，因为会员用户已经提前看过，社区讨论提前消耗完。两个数字放在一起看，延迟排播拉来了看片人数，却削弱了同步聊天的氛围。</p>
+      <div class="verdict">
+        <p><b>可核对结构：</b>①平台公布排播表（10-20）；②规则调整公告（10-26）；③免费日播放与弹幕两组数据（11-04）；④字幕勘误记录（11-08）。四类证据分别指向规则、修订、效果、执行，任一项缺失，判断就该降级为推测。</p>
+      </div>
+      <h3>判断二：150 秒的片头，正在成为区分版本的关键</h3>
+      <p>《逆风骑行部》第 5 集在 B 站版本片头为 90 秒，爱奇艺动漫版本为 150 秒，差异来自版权方提供的两套 OP 剪辑。字幕组在 11 月 7 日的发布说明里写了这件事，并注明“以 90 秒版为时间轴基准”。这意味着跨平台对照分镜时，前 2 分半钟不能直接对齐，需要先减去 60 秒偏移。同类差异在《陶土与梅雨》第 3 集也出现过，但只差 12 秒，容易被忽略。</p>
+      <h3>判断三：专题索引站的价值在“版本号”，不在片源</h3>
+      <p>樱花主题索引页里，“版本号”字段出现的频率从 10 月的每部 1 条升到 11 月的每部 2 条以上。举一个具体例子：《星图校对员》第 5 集有 BD 修正版与 TV 放送版两个时间戳，差别在第 14 分 22 秒的一张星图，BD 版补了 4 颗星。如果索引站只写“已更新至第 5 集”，这个差别就丢了。所以站点的可信度，看它是否记录这类修正，而不看它收录多少部。</p>
+      <h3>关于“免费”的两种说法差异</h3>
+      <p>平台宣传页写的是“本剧免费观看”，用户实际操作时发现 1080P 要登录、要会员。这两句话都不算错：免费指观看权，清晰度属增值服务。把两者混为一谈的评论区争吵，在《凌晨两点的咖啡馆》第 6 集下面出现过至少两轮。区分方法很简单——看播放器右上角清晰度菜单，标“VIP”的那一档就是付费层。</p>
+      <blockquote class="quote">
+        追番日历里最该记的不是更新日，而是“免费窗口开门日”。更新日人人知道，开门日只有排播表上才有。
+        <footer>—— 一位连续记录三季排播的观众，10 月 30 日发布在其番剧笔记账号</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="guide" aria-labelledby="gd-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">体验指南</div>
+        <h2 id="gd-h">把一集番剧安稳看完的四步</h2>
+      </div>
+      <p>从缓存到字幕轨选择，按手机端实际操作顺序写。</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>先确认免费窗口哪天开</h3>
+        <p>打开排播表，找“免费可看”列。以《夜行电车》为例，11 月 11 日才开放第 5、6 集，提前缓存会提示“暂无权限”。</p>
+      </li>
+      <li>
+        <h3>在 Wi-Fi 下选清晰度缓存</h3>
+        <p>24 分钟正片，1080P 约 500—700MB，720P 约 250—350MB。通勤 40 分钟看一集，720P 足够；静态镜头多的治愈番，1080P 差距明显。</p>
+      </li>
+      <li>
+        <h3>检查字幕轨是否为最新版</h3>
+        <p>《夜行电车》第 6 集 11 月 8 日修订过时间轴。播放器设置里选“简体·v2”，v1 在 03:12 处会早 0.8 秒。</p>
+      </li>
+      <li>
+        <h3>关掉自动连播再出门</h3>
+        <p>自动连播会把下一集预加载进缓存，流量套餐下容易超。设置里关闭“仅 Wi-Fi 下预载”之外，还要单独关“自动播放下一集”。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="compare" aria-labelledby="cp-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">对照面板</div>
+        <h2 id="cp-h">会员提前看与同步免费，怎么选</h2>
+      </div>
+      <p>同一季两种排播方式并行，选择取决于你想参与讨论的时间点。</p>
+    </div>
+    <div class="compare">
+      <div>
+        <h3><span class="tag">会员提前看</span> 9 部采用</h3>
+        <ul>
+          <li>新集上线即可看，比免费用户早 168 小时</li>
+          <li>弹幕与讨论区热度集中在会员日</li>
+          <li>免费日补看时，剧透已铺满社交平台</li>
+          <li>代表作品：《夜行电车》《逆风骑行部》</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="tag g">同步免费</span> 3 部采用</h3>
+        <ul>
+          <li>免费与会员同日更新，讨论同步</li>
+          <li>多数限 720P，1080P 仍需登录或会员</li>
+          <li>适合不想等、也不介意清晰度的观众</li>
+          <li>代表作品：《凌晨两点的咖啡馆》《星图校对员》</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="rank" aria-labelledby="rk-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">榜单</div>
+        <h2 id="rk-h">第 5 周综合口碑前五</h2>
+      </div>
+      <p>口径：评分站加权 60%、弹幕互动 25%、专题页检索量 15%，统计截至 11 月 4 日。</p>
+    </div>
+    <ol class="rank">
+      <li><div class="rk-b"><h3>陶土与梅雨</h3><p>作画稳定性最高，第 3 集拉坯段落被三次单独讨论。</p><div class="t">评分 8.9 · 检索量周增 31%</div></div></li>
+      <li><div class="rk-b"><h3>夜行电车</h3><p>时间线交叉带来二刷需求，但也因字幕偏移被扣分。</p><div class="t">评分 8.6 · 弹幕互动居首</div></div></li>
+      <li><div class="rk-b"><h3>星图校对员</h3><p>硬核设定吸引科普向二创，普通观众门槛偏高。</p><div class="t">评分 8.4 · 二创视频 210 条</div></div></li>
+      <li><div class="rk-b"><h3>逆风骑行部</h3><p>运动番里少见的低机位长镜头，节奏偏慢。</p><div class="t">评分 8.2 · 免费日流量峰值</div></div></li>
+      <li><div class="rk-b"><h3>凌晨两点的咖啡馆</h3><p>编剧更换后台词密度上升，评价两极。</p><div class="t">评分 7.9 · 评论区争议最多</div></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="timeline" aria-labelledby="tl-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">时间线</div>
+        <h2 id="tl-h">两起排播调整的经过</h2>
+      </div>
+      <p>只记录有公告出处的时间点，传闻不计入。</p>
+    </div>
+    <ul class="tl">
+      <li><b>10 月 20 日</b>秋季档 12 部排播表公布，9 部标注“会员提前”，3 部标注“同步免费”。</li>
+      <li><b>10 月 24 日</b>观众在讨论区指出，《藏书阁的守夜人》第 3 集起整集会员，与排播表描述不一致。</li>
+      <li><b>10 月 25 日</b>平台客服回复称“排播表存在表述误差”，未给出具体方案。</li>
+      <li><b>10 月 26 日</b>官方账号发布调整：改为前 6 分钟免费试看，第 6 分钟起需会员。原文措辞为“优化试看体验”。</li>
+      <li><b>11 月 2 日</b>《逆风骑行部》第 5 集免费窗口按期开放，未再调整。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="reviews" aria-labelledby="rv-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">用户评论</div>
+        <h2 id="rv-h">评论区里真正在聊什么</h2>
+      </div>
+      <p>选取近 30 天内具体到条目、集数或镜头的留言，含中性评价。</p>
+    </div>
+    <div class="grid g2">
+      <article class="review">
+        <div class="who"><span class="avatar">林</span><div><b>林间风</b><br><small>11 月 7 日 · 评《逆风骑行部》第 5 集</small></div></div>
+        <div class="stars">★★★★☆</div>
+        <p>第 5 集 14 分 22 秒那个爬坡长镜头，车轮花纹跟着转速变，细节做得比前四集都狠。就这段我回放了三次。缺点是前 6 分钟回忆杀可以砍掉。</p>
+      </article>
+      <article class="review">
+        <div class="who"><span class="avatar">阿</span><div><b>阿岚不追更</b><br><small>11 月 6 日 · 评《夜行电车》第 6 集</small></div></div>
+        <div class="stars">★★★☆☆</div>
+        <p>字幕 v1 在 03:12 那里和口型对不上，换 v2 才正常。剧情本身这集开始收线，乘客身份揭晓得有点快，反而没前几集那种慢慢铺开的劲。</p>
+      </article>
+      <article class="review">
+        <div class="who"><span class="avatar">石</span><div><b>石墨与咖啡</b><br><small>11 月 4 日 · 评《凌晨两点的咖啡馆》第 6 集</small></div></div>
+        <div class="stars">★★☆☆☆</div>
+        <p>换了编剧之后台词突然变密，一集说以前两集的话。第 6 集那个雨夜客人的独白写了四分钟，我中途去泡了杯咖啡回来还在说。不是说不好，就是不适应。</p>
+      </article>
+      <article class="review">
+        <div class="who"><span class="avatar">北</span><div><b>北斗七号</b><br><small>11 月 3 日 · 评《星图校对员》第 5 集</small></div></div>
+        <div class="stars">★★★★★</div>
+        <p>片尾那张星图和开普勒 452b 的真实观测数据对得上，去查了 NASA 的档案页，连视星等都没写错。这种认真劲儿现在不多见。节奏慢是真的，但我喜欢。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="news" aria-labelledby="nw-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">相关资讯</div>
+        <h2 id="nw-h">档期之外的几条动态</h2>
+      </div>
+      <p>与播放平台、制作方、线下活动相关的短讯，每条只出现一次。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <div class="meta"><time datetime="2026-11-05">11 月 5 日</time><span class="tag b">线下</span></div>
+        <h3>《陶土与梅雨》原画展定档 12 月</h3>
+        <p>制作组在官方账号公布，12 月 5—14 日在京都某画廊展出第 3 集拉坯段落的原画 62 张，含未被采用的 9 张草图。</p>
+      </article>
+      <article class="card">
+        <div class="meta"><time datetime="2026-11-01">11 月 1 日</time><span class="tag">平台</span></div>
+        <h3>B 站番剧区上线“排播日历”筛选</h3>
+        <p>新筛选可按“免费可看”“会员抢先”分类浏览当季番剧，目前覆盖 2026 年秋季档全部 12 部，历史档期尚未接入。</p>
+      </article>
+      <article class="card">
+        <div class="meta"><time datetime="2026-10-28">10 月 28 日</time><span class="tag a">制作</span></div>
+        <h3>《藏书阁的守夜人》宣布总集数 13 集</h3>
+        <p>官方设定集预售页写明全 13 集，比最初公布的 12 集多一集。多出的一集据制作人访谈说法是“把结尾拆成了两集”。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <div class="article" style="max-width:820px">
+      <div class="eyebrow">常见问题</div>
+      <h2 id="fq-h">免费追番时最常问的 6 个问题</h2>
+      <details>
+        <summary>樱花季番剧在免费平台一般延迟多久更新？</summary>
+        <div class="ans"><p>2026 年 10 月档以 7 天延迟为主，12 部里有 9 部采用会员提前 168 小时。少数作品是 24 小时，比如《凌晨两点的咖啡馆》实际为同步免费，差别在清晰度。判断依据看排播表的“免费可看”列，不看宣传语。</p></div>
+      </details>
+      <details>
+        <summary>overflow 动漫免费观看时字幕错位怎么处理？</summary>
+        <div class="ans"><p>先在播放器设置里切换字幕轨，找带 v2 或“修订”字样的版本。《夜行电车》第 6 集 v1 在 03:12 处早 0.8 秒，v2 已修。仍错位就清除浏览器缓存重载，Safari 用户关闭内容拦截器后重试。</p></div>
+      </details>
+      <details>
+        <summary>手机流量看 1080P 一集要多少数据？</summary>
+        <div class="ans"><p>24 分钟正片，1080P 约 500—700MB，720P 约 250—350MB，480P 约 120MB。通勤建议在 Wi-Fi 下缓存 720P，静态镜头多的治愈番再选 1080P。</p></div>
+      </details>
+      <details>
+        <summary>无账号能收藏追番列表吗？</summary>
+        <div class="ans"><p>可以，列表存在本地浏览器，换设备或清缓存会丢。登录后同步到云端。想跨设备用，登录比反复截图靠谱。</p></div>
+      </details>
+      <details>
+        <summary>樱花主题专题页和番剧正片是什么关系？</summary>
+        <div class="ans"><p>专题页做条目索引、档期表和字幕版本记录，正片播放由各平台提供。页面里出现“播放源：××”且没有内嵌播放器的，就是索引站。它不托管视频文件。</p></div>
+      </details>
+      <details>
+        <summary>为什么同一集在不同平台时长不一样？</summary>
+        <div class="ans"><p>片头版本不同。《逆风骑行部》第 5 集 B 站版 OP 90 秒，爱奇艺动漫版 150 秒，差 60 秒。跨平台对照分镜要先减这 60 秒偏移。以字幕组发布说明里写的时间轴基准为准。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="recs" aria-labelledby="rc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">相关推荐</div>
+        <h2 id="rc-h">按你的口味再推一层</h2>
+      </div>
+      <p>标签都是能直接搜的词，点开看该题材的档期与代表作品。</p>
+    </div>
+    <div class="tagcloud">
+      <a href="/#picks">悬疑推理番推荐</a>
+      <a href="/#picks">治愈日常番</a>
+      <a href="/#picks">运动竞技番</a>
+      <a href="/#picks">硬科幻番</a>
+      <a href="/#picks">奇幻冒险番</a>
+      <a href="/#deep">泡面番短篇</a>
+      <a href="/#guide">番剧离线缓存</a>
+      <a href="/#faq">字幕版本对照</a>
+      <a href="/#latest">秋季档排播表</a>
+      <a href="/#reviews">番剧评论区口碑</a>
+      <a href="/#rank">综合口碑榜</a>
+      <a href="/#channels">剧场版与 OVA</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="trust" aria-labelledby="ts-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">可信度分层</div>
+        <h2 id="ts-h">页面信息按出处分级</h2>
+      </div>
+      <p>便于判断哪些内容能直接引用，哪些只是转述。</p>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <h3><span class="tag g">A 级 · 可核对</span></h3>
+        <p>平台排播表、官方账号公告、字幕组发布说明、制作组访谈原文。日期与措辞可查。全页共 23 条。</p>
+      </article>
+      <article class="card">
+        <h3><span class="tag a">B 级 · 有出处转述</span></h3>
+        <p>媒体对访谈的转述、观众整理的播放数据。注明来源账号与日期，但未拿到原始文件。共 9 条。</p>
+      </article>
+      <article class="card">
+        <h3><span class="tag">C 级 · 推测</span></h3>
+        <p>对后续剧情走向、制作方调整原因的推断。文中已标“推测”字样，不作为结论使用。共 4 条。</p>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand" style="color:#fff;margin-bottom:6px">
+          <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#e25c8c"/><path d="M32 13c6.5 9 6.5 29 0 38-6.5-9-6.5-29 0-38z" fill="#fff"/><path d="M13 32c9-6.5 29-6.5 38 0-9 6.5-29 6.5-38 0z" fill="#ffe3ee"/></svg>
+          <span style="color:#fff">overflow动漫免费樱花</span>
+        </div>
+        <p class="fpos">把排播表、字幕版本和缓存容量摊开写，按作品与日期核对，不替平台做承诺。</p>
+      </div>
+      <div>
+        <h3>追番入口</h3>
+        <ul>
+          <li><a href="/#picks">本周精选 6 部</a></li>
+          <li><a href="/#latest">近 30 天更新</a></li>
+          <li><a href="/#channels">分类频道</a></li>
+          <li><a href="/#rank">口碑榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">离线缓存四步</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#compare">排播方式对照</a></li>
+          <li><a href="/#trust">可信度分层</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于条目</h3>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#reviews">用户评论</a></li>
+          <li><a href="/#recs">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>页面内番剧条目、评分与评论均为示例数据，用于展示编排方式；排播日期以各平台实际公告为准。</span>
+      <span>内容核对日 2026-11-08 · 版权归原制作方与平台所有</span>
+    </div>
+  </div>
+</footer>
+<button class="top-btn" id="topBtn" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=900){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  var input=document.getElementById('q');
+  var res=document.getElementById('qres');
+  var data=[
+    {t:'夜行电车',d:'悬疑推理 · 更新至第 6 集',h:'/#picks'},
+    {t:'陶土与梅雨',d:'治愈日常 · 更新至第 6 集',h:'/#picks'},
+    {t:'逆风骑行部',d:'运动竞技 · 更新至第 5 集',h:'/#picks'},
+    {t:'凌晨两点的咖啡馆',d:'治愈日常 · 更新至第 6 集',h:'/#picks'},
+    {t:'藏书阁的守夜人',d:'奇幻冒险 · 更新至第 4 集',h:'/#picks'},
+    {t:'星图校对员',d:'硬科幻 · 更新至第 6 集',h:'/#picks'},
+    {t:'离线缓存容量表',d:'体验指南 · 720P/1080P',h:'/#guide'},
+    {t:'字幕版本对照',d:'常见问题 · 38 条记录',h:'/#faq'},
+    {t:'秋季档排播表',d:'最新更新 · 12 部作品',h:'/#latest'},
+    {t:'会员提前看与同步免费',d:'对照面板 · 9 部对 3 部',h:'/#compare'},
+    {t:'综合口碑榜',d:'榜单 · 第 5 周',h:'/#rank'},
+    {t:'排播调整时间线',d:'时间线 · 10 月 20 日至 11 月 2 日',h:'/#timeline'}
+  ];
+  function render(kw){
+    var k=kw.trim().toLowerCase();
+    if(!k){res.classList.remove('on');res.innerHTML='';return;}
+    var hit=data.filter(function(x){return (x.t+' '+x.d).toLowerCase().indexOf(k)>-1;});
+    res.innerHTML='';
+    if(hit.length===0){
+      var em=document.createElement('div');
+      em.className='empty';
+      em.textContent='没有匹配的条目，换个关键词试试：夜行电车、缓存、排播。';
+      res.appendChild(em);
+    }else{
+      hit.slice(0,8).forEach(function(x){
+        var a=document.createElement('a');
+        a.href=x.h;
+        a.textContent=x.t+' — '+x.d;
+        a.setAttribute('role','option');
+        res.appendChild(a);
+      });
+    }
+    res.classList.add('on');
+  }
+  if(input){
+    input.addEventListener('input',function(){render(input.value);});
+    input.addEventListener('focus',function(){if(input.value.trim())render(input.value);});
+  }
+  document.addEventListener('click',function(e){
+    if(res&&!res.contains(e.target)&&e.target!==input){res.classList.remove('on');}
+  });
+  var topBtn=document.getElementById('topBtn');
+  function onScroll(){
+    if(window.scrollY>520){topBtn.classList.add('on');}else{topBtn.classList.remove('on');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  topBtn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  var secs=document.querySelectorAll('main section[id]');
+  var links=document.querySelectorAll('#mainNav a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id=en.target.id;
+          links.forEach(function(l){
+            var on=l.getAttribute('href')==='/# '+id||l.getAttribute('href')==='#'+id||l.getAttribute('href')===' /#'+id;
+          });
+        }
+      });
+    },{rootMargin:'-120px 0px -60% 0px'});
+    secs.forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+        </html>
